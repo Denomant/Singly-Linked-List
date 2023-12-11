@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class CharNode {
 public:
 	char Value;
@@ -32,6 +34,33 @@ public:
 		//New Node Set
 		CurrentNode->Nextptr = new CharNode(Value);
 	}
+
+
+	void Append(MyString *StringToAdd) {
+		//MyString
+				
+		// Non empty MyString
+		if(StringToAdd->HeadNode->Value == '\0') {
+			return;
+		}
+
+		// Skip valued nodes
+		CharNode *CurrentNodeToSave = HeadNode;
+		while(CurrentNodeToSave->Nextptr != nullptr) {
+			CurrentNodeToSave = CurrentNodeToSave->Nextptr;
+		}
+
+		CharNode *CurrentNodeToAdd = StringToAdd->HeadNode;
+		while(CurrentNodeToAdd->Nextptr != nullptr) {
+			CurrentNodeToSave->Nextptr = new CharNode(CurrentNodeToAdd->Value);
+			CurrentNodeToSave = CurrentNodeToSave->Nextptr;
+			CurrentNodeToAdd = CurrentNodeToAdd->Nextptr;
+		}
+		CurrentNodeToSave->Nextptr = new CharNode(CurrentNodeToAdd->Value);
+
+
+	}
+
 };
 
 
