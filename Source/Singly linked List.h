@@ -1,9 +1,20 @@
 
 class CharNode {
 public:
-	char Symbol;
-	CharNode *NextSympolptr = nullptr;
+	char Value;
+	CharNode *NextSymbolptr = nullptr;
+	CharNode(char Value) {
+		this->Value = Value;
+	}
+};
+ 
+
+class MyString() {
+public:
+	CharNode *HeadNode;
 };
 
- 
+
+
+
 
