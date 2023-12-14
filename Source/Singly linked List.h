@@ -37,8 +37,6 @@ public:
 
 
 	void Append(MyString *StringToAdd) {
-		//FIXME: if this->HeadNode->Value == '\0'
-
 		//MyString
 				
 		// Non empty MyString
