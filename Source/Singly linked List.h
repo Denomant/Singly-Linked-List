@@ -142,7 +142,6 @@ public:
 			}
 			
 			CurrentNodeToSave->Value = CurrentNodeToAdd->Value;
-			cout << CurrentNodeToAdd->Value << " Added\n";
 			CurrentNodeToSave->Nextptr = new CharNode('\0');
 			CurrentNodeToSave = CurrentNodeToSave->Nextptr;
 			CurrentNodeToAdd = CurrentNodeToAdd->Nextptr;
